@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class i81n | </title>
+
+	<script type="text/javascript" src="resources/combined.js?1889508232"></script>
+	<script type="text/javascript" src="elementlist.js?154758736"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-i81n.html">i81n</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href=".zip" title="Download documentation as ZIP archive"><span>Download</span></a>
+			</li>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class i81n</h1>
+
+
+	<div class="description">
+	
+<p>Biblioteca para internacionalização de aplicações com PHP</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-i81n.html#20-401" title="Go to source code">i81n.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-i81n.html#51-67" title="Go to source code">__construct</a>( <span>string <var>$lang</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$domain</var> = <span class="php-quote">'*'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Construtor da classe.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Construtor da classe.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lang</var></dt>
+					<dd><code>string</code><br>$lang Uma string representando o idioma a ser utilizado.</dd>
+					<dt><var>$domain</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDomain" id="_setDomain">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDomain">#</a>
+		<code><a href="source-class-i81n.html#69-92" title="Go to source code">setDomain</a>( <span>string <var>$domain</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Define o domínio a ser utilizado para a tradução.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define o domínio a ser utilizado para a tradução.</p>
+
+<p>Cada domínio corresponde a um arquivo INI com as traduções respectivas. É
+útil para criar traduções para módulos separados.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code><br>$domain O domínio a ser utilizado para tradução.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDomain" id="_getDomain">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDomain">#</a>
+		<code><a href="source-class-i81n.html#94-100" title="Go to source code">getDomain</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retorna o domínio atualmente configurado.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna o domínio atualmente configurado.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLang" id="_getLang">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLang">#</a>
+		<code><a href="source-class-i81n.html#102-109" title="Go to source code">getLang</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retorna a linguagem definida na variável de ambiente LANG</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna a linguagem definida na variável de ambiente LANG</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLang" id="_setLang">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLang">#</a>
+		<code><a href="source-class-i81n.html#111-120" title="Go to source code">setLang</a>( <span>string <var>$lang</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Configura a variável de ambiente LANG.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configura a variável de ambiente LANG.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lang</var></dt>
+					<dd><code>string</code><br>$lang Um código de linguagem, tal como en_US, pt_BR, ...</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Retorna o conteúdo de LANG após a alteração.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLocaleDir" id="_getLocaleDir">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLocaleDir">#</a>
+		<code><a href="source-class-i81n.html#122-128" title="Go to source code">getLocaleDir</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retorna o caminho para os arquivos de tradução.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna o caminho para os arquivos de tradução.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLocaleDir" id="_setLocaleDir">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLocaleDir">#</a>
+		<code><a href="source-class-i81n.html#130-149" title="Go to source code">setLocaleDir</a>( <span>string <var>$dirname</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Configura o caminho para os arquivos de tradução.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configura o caminho para os arquivos de tradução.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dirname</var></dt>
+					<dd><code>string</code><br>$dirname O diretório onde estão os arquivos de tradução.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Retorna o diretório configurado.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseLang" id="_parseLang">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseLang">#</a>
+		<code><a href="source-class-i81n.html#151-181" title="Go to source code">parseLang</a>( )</code>
+
+		<div class="description short">
+			
+<p>Monta a tabela de tradução a partir do domínio especificado.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Monta a tabela de tradução a partir do domínio especificado.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hash" id="_hash">
+
+		<td class="attributes"><code>
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hash">#</a>
+		<code><a href="source-class-i81n.html#183-194" title="Go to source code">hash</a>( <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cria um hash para uma mensagem.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cria um hash para uma mensagem.</p>
+
+<p>Utilizado para referenciar as mensagens no arquivo INI de tradução.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg A mensagem para calcular o hash</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Retorna o hash para a mensagem<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="searchInTranslateTable" id="_searchInTranslateTable">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_searchInTranslateTable">#</a>
+		<code><a href="source-class-i81n.html#196-213" title="Go to source code">searchInTranslateTable</a>( <span>string <var>$hash</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Procura uma tradução através do hash da mesnagem original.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Procura uma tradução através do hash da mesnagem original.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$hash</var></dt>
+					<dd><code>string</code><br>$hash O hash da mensagem a ser procurada na tabela de tradução.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Retorna a mensagem traduzida ou uma string vazia.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="translate" id="_translate">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_translate">#</a>
+		<code><a href="source-class-i81n.html#215-233" title="Go to source code">translate</a>( <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Realiza a tradução de mensagens.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Realiza a tradução de mensagens.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$string A mensagem a ser traduzida.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>A mensagem traduzida<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseFileSource" id="_parseFileSource">
+
+		<td class="attributes"><code>
+			 protected static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseFileSource">#</a>
+		<code><a href="source-class-i81n.html#237-284" title="Go to source code">parseFileSource</a>( <span>string <var>$file</var></span>, <span>string <var>$pattern</var> = <span class="php-quote">'-&gt;translate'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Identifica em um arquivo fonte por mensagens usados com a biblioteca i81n
+(método translate) e cria um arquivo INI de tradução.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Identifica em um arquivo fonte por mensagens usados com a biblioteca i81n
+(método translate) e cria um arquivo INI de tradução.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file Arquivo fonte para o parser</dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code><br>$pattern O padrão de busca das mensagens a traduzir</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Retorna um array com as linhas do arquivo INI de tradução<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseDir" id="_parseDir">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseDir">#</a>
+		<code><a href="source-class-i81n.html#286-364" title="Go to source code">parseDir</a>( <span>mixed <var>$configfile</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFileSources" id="_getFileSources">
+
+		<td class="attributes"><code>
+			 protected static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFileSources">#</a>
+		<code><a href="source-class-i81n.html#366-400" title="Go to source code">getFileSources</a>( <span>mixed <var>$sourcedir</var></span>, <span>mixed <var>$recursive</var></span>, <span>mixed <var>$exclude</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="lang" id="$lang">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-i81n.html#26-30" title="Go to source code"><var>$lang</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">NULL</span></code></td>
+		<td class="description"><div>
+			<a href="#$lang" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>O idioma a ser utilizado</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>O idioma a ser utilizado</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="localeDir" id="$localeDir">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-i81n.html#32-36" title="Go to source code"><var>$localeDir</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'./locale'</span></code></td>
+		<td class="description"><div>
+			<a href="#$localeDir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>O diretório que contém os arquivos INI de tradução. O padrão é
+./locale</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>O diretório que contém os arquivos INI de tradução. O padrão é
+./locale</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="translateTable" id="$translateTable">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-i81n.html#38-43" title="Go to source code"><var>$translateTable</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$translateTable" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Armazena a tabela de tradução.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Armazena a tabela de tradução.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="domain" id="$domain">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-i81n.html#45-49" title="Go to source code"><var>$domain</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'*'</span></code></td>
+		<td class="description"><div>
+			<a href="#$domain" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Especifica o domínio a ser utilizado. Cada arquivo INI é um domínio. Para
+todos os domínios, utilizar * (padrão).</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Especifica o domínio a ser utilizado. Cada arquivo INI é um domínio. Para
+todos os domínios, utilizar * (padrão).</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
