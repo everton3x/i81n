@@ -85,7 +85,7 @@
 
 	<div class="description">
 	
-<p>Biblioteca para internacionalização de aplicações com PHP</p>
+<p>Library for internationalizing applications with PHP</p>
 
 	</div>
 
@@ -125,20 +125,20 @@
 
 		<div class="description short">
 			
-<p>Construtor da classe.</p>
+<p>Class constructor.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Construtor da classe.</p>
+<p>Class constructor.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$lang</var></dt>
-					<dd><code>string</code><br>$lang Uma string representando o idioma a ser utilizado.</dd>
+					<dd><code>string</code><br>$lang A string representing the language to be used.</dd>
 					<dt><var>$domain</var></dt>
 					<dd></dd>
 				</dl></div>
@@ -169,23 +169,23 @@
 
 		<div class="description short">
 			
-<p>Define o domínio a ser utilizado para a tradução.</p>
+<p>Sets the domain to be used for translation.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Define o domínio a ser utilizado para a tradução.</p>
+<p>Sets the domain to be used for translation.</p>
 
-<p>Cada domínio corresponde a um arquivo INI com as traduções respectivas. É
-útil para criar traduções para módulos separados.</p>
+<p>Each domain corresponds to an INI file with the translations. It is useful to
+create translations for separate modules.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$domain</var></dt>
-					<dd><code>string</code><br>$domain O domínio a ser utilizado para tradução.</dd>
+					<dd><code>string</code><br>$domain The domain to be used for translation.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -218,13 +218,13 @@
 
 		<div class="description short">
 			
-<p>Retorna o domínio atualmente configurado.</p>
+<p>Returns the currently configured domain.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Retorna o domínio atualmente configurado.</p>
+<p>Returns the currently configured domain.</p>
 
 
 
@@ -255,13 +255,13 @@
 
 		<div class="description short">
 			
-<p>Retorna a linguagem definida na variável de ambiente LANG</p>
+<p>Returns the language set in the LANG environment variable</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Retorna a linguagem definida na variável de ambiente LANG</p>
+<p>Returns the language set in the LANG environment variable</p>
 
 
 
@@ -292,25 +292,25 @@
 
 		<div class="description short">
 			
-<p>Configura a variável de ambiente LANG.</p>
+<p>Set the LANG environment variable.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Configura a variável de ambiente LANG.</p>
+<p>Set the LANG environment variable.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$lang</var></dt>
-					<dd><code>string</code><br>$lang Um código de linguagem, tal como en_US, pt_BR, ...</dd>
+					<dd><code>string</code><br>$lang A language code, such as en_US, en_GB, ...</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Retorna o conteúdo de LANG após a alteração.<br />
+					<code>string</code><br>Returns the contents of LANG after the change.<br />
 				</div>
 
 
@@ -334,13 +334,13 @@
 
 		<div class="description short">
 			
-<p>Retorna o caminho para os arquivos de tradução.</p>
+<p>Returns the path for translation files.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Retorna o caminho para os arquivos de tradução.</p>
+<p>Returns the path for translation files.</p>
 
 
 
@@ -371,25 +371,25 @@
 
 		<div class="description short">
 			
-<p>Configura o caminho para os arquivos de tradução.</p>
+<p>Sets the path for translation files.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Configura o caminho para os arquivos de tradução.</p>
+<p>Sets the path for translation files.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$dirname</var></dt>
-					<dd><code>string</code><br>$dirname O diretório onde estão os arquivos de tradução.</dd>
+					<dd><code>string</code><br>$dirname The directory where the files are translation.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Retorna o diretório configurado.<br />
+					<code>string</code><br>Returns the configured directory.<br />
 				</div>
 
 				<h4>Throws</h4>
@@ -417,13 +417,13 @@
 
 		<div class="description short">
 			
-<p>Monta a tabela de tradução a partir do domínio especificado.</p>
+<p>Mounts from the domain specified translation table.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Monta a tabela de tradução a partir do domínio especificado.</p>
+<p>Mounts from the domain specified translation table.</p>
 
 
 
@@ -458,27 +458,27 @@
 
 		<div class="description short">
 			
-<p>Cria um hash para uma mensagem.</p>
+<p>Creates a hash for a message.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Cria um hash para uma mensagem.</p>
+<p>Creates a hash for a message.</p>
 
-<p>Utilizado para referenciar as mensagens no arquivo INI de tradução.</p>
+<p>Used to reference the messages in INI file translation.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$msg</var></dt>
-					<dd><code>string</code><br>$msg A mensagem para calcular o hash</dd>
+					<dd><code>string</code><br>$msg The message to compute the hash</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Retorna o hash para a mensagem<br />
+					<code>string</code><br>Returns the hash for the message<br />
 				</div>
 
 
@@ -502,25 +502,25 @@
 
 		<div class="description short">
 			
-<p>Procura uma tradução através do hash da mesnagem original.</p>
+<p>Search through a translation of the original hash mesnagem.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Procura uma tradução através do hash da mesnagem original.</p>
+<p>Search through a translation of the original hash mesnagem.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$hash</var></dt>
-					<dd><code>string</code><br>$hash O hash da mensagem a ser procurada na tabela de tradução.</dd>
+					<dd><code>string</code><br>$hash The hash of the message to be sought in the translation table.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Retorna a mensagem traduzida ou uma string vazia.<br />
+					<code>string</code><br>Returns the translated message or an empty string.<br />
 				</div>
 
 
@@ -544,25 +544,25 @@
 
 		<div class="description short">
 			
-<p>Realiza a tradução de mensagens.</p>
+<p>Performs the translation of messages.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Realiza a tradução de mensagens.</p>
+<p>Performs the translation of messages.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$msg</var></dt>
-					<dd><code>string</code><br>$string A mensagem a ser traduzida.</dd>
+					<dd><code>string</code><br>$string The message to be translated.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>A mensagem traduzida<br />
+					<code>string</code><br>The translated message<br />
 				</div>
 
 
@@ -586,29 +586,29 @@
 
 		<div class="description short">
 			
-<p>Identifica em um arquivo fonte por mensagens usados com a biblioteca i81n
-(método translate) e cria um arquivo INI de tradução.</p>
+<p>Identifies a file source for messages used with i81n library (translate
+method) and creates an INI file translation.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Identifica em um arquivo fonte por mensagens usados com a biblioteca i81n
-(método translate) e cria um arquivo INI de tradução.</p>
+<p>Identifies a file source for messages used with i81n library (translate
+method) and creates an INI file translation.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$file</var></dt>
-					<dd><code>string</code><br>$file Arquivo fonte para o parser</dd>
+					<dd><code>string</code><br>$file Source file for the parser</dd>
 					<dt><var>$pattern</var></dt>
-					<dd><code>string</code><br>$pattern O padrão de busca das mensagens a traduzir</dd>
+					<dd><code>string</code><br>$pattern The search pattern of the messages to translate</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code><br>Retorna um array com as linhas do arquivo INI de tradução<br />
+					<code>array</code><br>Returns an array with the lines of the INI file translation<br />
 				</div>
 
 				<h4>Throws</h4>
@@ -709,13 +709,13 @@
 
 			<div class="description short">
 				
-<p>O idioma a ser utilizado</p>
+<p>The language to be used</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>O idioma a ser utilizado</p>
+<p>The language to be used</p>
 
 
 			</div>
@@ -736,14 +736,14 @@
 
 			<div class="description short">
 				
-<p>O diretório que contém os arquivos INI de tradução. O padrão é
+<p>The directory containing the translation INI files. The default is
 ./locale</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>O diretório que contém os arquivos INI de tradução. O padrão é
+<p>The directory containing the translation INI files. The default is
 ./locale</p>
 
 
@@ -765,13 +765,13 @@
 
 			<div class="description short">
 				
-<p>Armazena a tabela de tradução.</p>
+<p>Holds the translation table.</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Armazena a tabela de tradução.</p>
+<p>Holds the translation table.</p>
 
 
 			</div>
@@ -792,15 +792,15 @@
 
 			<div class="description short">
 				
-<p>Especifica o domínio a ser utilizado. Cada arquivo INI é um domínio. Para
-todos os domínios, utilizar * (padrão).</p>
+<p>Specifies the domain to be used. Each INI file is a domain. For all domains,
+use * (default).</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Especifica o domínio a ser utilizado. Cada arquivo INI é um domínio. Para
-todos os domínios, utilizar * (padrão).</p>
+<p>Specifies the domain to be used. Each INI file is a domain. For all domains,
+use * (default).</p>
 
 
 			</div>

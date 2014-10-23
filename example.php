@@ -18,16 +18,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>i81n :: Exemplo de uso</title>
+        <title>i81n :: Example of use</title>
     </head>
     <body>
-        <h1>Exemplo de uso da biblioteca de internacionalização i81n</h1>
+        <h1>Example of use of the library i81n internationalization</h1>
         <?php
-        //$lang = 'pt_BR';//define o idioma a utilizar
+        //$lang = 'pt_BR';//Sets the language to use
         $lang = 'en_US';
-        require 'i81n.php';//carrega a biblioteca i81n
+        require 'i81n.php';//loads the i81n library
         
-        $i81n = new i81n($lang, '*');//cria uma instância de tradução para todos os domínios disponíveis
+        $i81n = new i81n($lang, '*');//creates an instance of translation for all domains available
         
         printf("<p>%s.</p>", $i81n->translate('A biblioteca i81n possibilita a internacionalização de aplicações através do PHP sem a necessidade de gettext ou outra extenção do PHP'));
         

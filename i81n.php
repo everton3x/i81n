@@ -18,40 +18,40 @@
  */
 
 /**
- * Biblioteca para internacionalização de aplicações com PHP
+ * Library for internationalizing applications with PHP
  * 
  * 
  */
 class i81n{
     /**
-     * O idioma a ser utilizado
+     * The language to be used
      * @var string
      */
     protected $lang = NULL;
     
     /**
-     * O diretório que contém os arquivos INI de tradução. O padrão é ./locale
+     * The directory containing the translation INI files. The default is ./locale
      * @var string
      */
     protected $localeDir = './locale';
     
     /**
-     * Armazena a tabela de tradução.
+     * Holds the translation table.
      * 
      * @var array
      */
     protected $translateTable = array();
     
     /**
-     * Especifica o domínio a ser utilizado. Cada arquivo INI é um domínio. Para todos os domínios, utilizar * (padrão).
+     * Specifies the domain to be used. Each INI file is a domain. For all domains, use * (default).
      * @var string
      */
     protected $domain = '*';
 
     /**
-     * Construtor da classe.
+     * Class constructor.
      * 
-     * @param string $lang Uma string representando o idioma a ser utilizado.
+     * @param string $lang A string representing the language to be used.
      * 
      * @throws Exception
      */
@@ -67,17 +67,17 @@ class i81n{
     }
 
     /**
-     * Define o domínio a ser utilizado para a tradução.
+     * Sets the domain to be used for translation.
      * 
-     * Cada domínio corresponde a um arquivo INI com as traduções respectivas. É útil para criar traduções para módulos separados.
+     * Each domain corresponds to an INI file with the translations. It is useful to create translations for separate modules.
      * 
-     * @param string $domain O domínio a ser utilizado para tradução.
+     * @param string $domain The domain to be used for translation.
      * @return boolean
      * @throws Exception
      */
     public function setDomain($domain){
         switch ($domain){
-            case '*'://todos os domínios
+            case '*'://all domains
                 $this->domain = $domain;
                 break;
             default:
@@ -92,7 +92,7 @@ class i81n{
     }
     
     /**
-     * Retorna o domínio atualmente configurado.
+     * Returns the currently configured domain.
      * @return string
      */
     public function getDomain(){
@@ -100,7 +100,7 @@ class i81n{
     }
 
     /**
-     * Retorna a linguagem definida na variável de ambiente LANG
+     * Returns the language set in the LANG environment variable
      * 
      * @return string
      */
@@ -109,10 +109,10 @@ class i81n{
     }
     
     /**
-     * Configura a variável de ambiente LANG.
+     * Set the LANG environment variable.
      * 
-     * @param string $lang Um código de linguagem, tal como en_US, pt_BR, ...
-     * @return string Retorna o conteúdo de LANG após a alteração.
+     * @param string $lang A language code, such as en_US, en_GB, ...
+     * @return string Returns the contents of LANG after the change.
      */
     public function setLang($lang){
         $this->lang = $lang;
@@ -120,7 +120,7 @@ class i81n{
     }
     
     /**
-     * Retorna o caminho para os arquivos de tradução.
+     * Returns the path for translation files.
      * @return string
      */
     public function getLocaleDir(){
@@ -128,28 +128,28 @@ class i81n{
     }
     
     /**
-     * Configura o caminho para os arquivos de tradução.
+     * Sets the path for translation files.
      * 
-     * @param string $dirname O diretório onde estão os arquivos de tradução.
-     * @return string Retorna o diretório configurado.
+     * @param string $dirname The directory where the files are translation.
+     * @return string Returns the configured directory.
      * @throws Exception
      */
     public function setLocaleDir($dirname){
-        //testa se é diretório e se existe
+        //forehead is directory and if there
         if(!is_dir($dirname)){
             throw new Exception("$dirname is not a directory.");
         }elseif(!file_exists($dirname)){
             throw new Exception("The $dirname directory does not exist.");
         }
         
-        //define o local dos arquivos de tradução
+        //defines the location of the translation files
         $this->localeDir = realpath($dirname);//pega o caminho absoluto
         
         return $this->getLocaleDir();
     }
     
     /**
-     * Monta a tabela de tradução a partir do domínio especificado.
+     * Mounts from the domain specified translation table.
      * 
      * @return bool
      * @throws Exception
@@ -181,23 +181,23 @@ class i81n{
     }
     
     /**
-     * Cria um hash para uma mensagem.
+     * Creates a hash for a message.
      * 
-     * Utilizado para referenciar as mensagens no arquivo INI de tradução.
+     * Used to reference the messages in INI file translation.
      * 
      * 
-     * @param string $msg A mensagem para calcular o hash
-     * @return string Retorna o hash para a mensagem
+     * @param string $msg The message to compute the hash
+     * @return string Returns the hash for the message
      */
     protected static function hash($msg){
         return sha1($msg);
     }
     
     /**
-     * Procura uma tradução através do hash da mesnagem original.
+     * Search through a translation of the original hash mesnagem.
      * 
-     * @param string $hash O hash da mensagem a ser procurada na tabela de tradução.
-     * @return string Retorna a mensagem traduzida ou uma string vazia.
+     * @param string $hash The hash of the message to be sought in the translation table.
+     * @return string Returns the translated message or an empty string.
      */
     protected function searchInTranslateTable($hash){
         
@@ -213,10 +213,10 @@ class i81n{
     }
 
     /**
-     * Realiza a tradução de mensagens.
+     * Performs the translation of messages.
      * 
-     * @param string $string A mensagem a ser traduzida.
-     * @return string A mensagem traduzida
+     * @param string $string The message to be translated.
+     * @return string The translated message
      */
     public function translate($msg){
         if(count($this->translateTable) == 0){
@@ -232,24 +232,24 @@ class i81n{
         }
     }
     
-    //aqui começas os métodos para criação automática dos arquivos INI
+    //here start methods for automatic creation of INI files
     
     /**
-     * Identifica em um arquivo fonte por mensagens usados com a biblioteca i81n (método translate) e cria um arquivo INI de tradução.
+     * Identifies a file source for messages used with i81n library (translate method) and creates an INI file translation.
      * 
-     * @param string $file Arquivo fonte para o parser
-     * @param string $pattern O padrão de busca das mensagens a traduzir
-     * @return array Retorna um array com as linhas do arquivo INI de tradução
+     * @param string $file Source file for the parser
+     * @param string $pattern The search pattern of the messages to translate
+     * @return array Returns an array with the lines of the INI file translation
      * @throws Exception
      */
     protected static function parseFileSource($file, $pattern = '->translate'){
         //printf("<p>Initiating processing %s</p>", $file);
-        //testa o arquivo fonte
+        //tests the source file
         if(!file_exists($file)){
             throw new Exception("File $file not found.");
         }
         
-        //lê o conteúdo do arquivo-fonte
+        //reads the contents of the source file
         //printf("<p>Loading the contents of %s</p>", $file);
         try {
             $source = file($file);
@@ -285,7 +285,7 @@ class i81n{
     
     public static function parseDir($configfile){
         printf("Starting the scan".PHP_EOL);
-        //Carrega o arquivo de configurações
+        //Load the settings file
         try {
             $conf = parse_ini_file($configfile, true);
         } catch (Exception $ex) {
